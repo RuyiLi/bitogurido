@@ -1,0 +1,30 @@
+tl 100
+1l 1000
+br bl 100
+tr bl 200
+1l 2r 500
+1r 2t 700
+1r 100
+1r 200
+1t 300
+tl 400
+tr 500
+tr 600
+tr 700
+tl 800
+bl 900
+tl 1000
+br 1100
+tl tr bl br 100
+r
+l
+r l 700
+2r 2l 2000
+r l 50
+t b 50
+tr bl 50
+bl tr 50
+r l 50
+t b 50
+tr bl 50
+bl tr 50

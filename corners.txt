@@ -1,0 +1,32 @@
+tr
+bl
+tl
+br
+tr 100
+bl 200
+tl 300
+br 400
+tr 500
+bl 600
+tl 700
+br 800
+tr 900
+bl 1000
+tl 1100
+br 1200
+tr 1300
+bl 1400
+tl 1500
+br 1600
+tr 1700
+bl 1800
+tl 1900
+br 2000
+br bl tl tr 500
+br bl tl tr 500
+br bl tl tr 1000
+br bl tl tr 1000
+br bl tl tr 1500
+br bl tl tr 1500
+br bl tl tr 2000
+br bl tl tr 2000
