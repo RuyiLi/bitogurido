@@ -15,10 +15,10 @@ let pos = { x: 1, y: 1 };
 
 function start(map){
 	let beats = map.split('\n');
-	readBlob('blob:https://steadfast-market.glitch.me/77df19e7-d4e7-4675-807f-5206f1470406')
-	let music = beats.shift();
-	snd.src = 'blob:https://steadfast-market.glitch.me/77df19e7-d4e7-4675-807f-5206f1470406'
-	snd.play()
+	//readBlob('blob:https://steadfast-market.glitch.me/77df19e7-d4e7-4675-807f-5206f1470406')
+	//let music = beats.shift();
+	//snd.src = 'blob:https://steadfast-market.glitch.me/77df19e7-d4e7-4675-807f-5206f1470406'
+	//snd.play()
 	ctx.strokeStyle = ctx.fillStyle = '#EFEFEF';
 	ctx.lineWidth = 0.8;
 	console.log('Loaded bitomap! Patterns: ' + beats.join(' | '));
@@ -48,10 +48,6 @@ document.addEventListener('keydown', function(e) {
     if(e.keyCode === 38) pos.y += pos.y > 0 ? -1 : 0;
     if(e.keyCode === 39) pos.x += pos.x < 2 ? 1 : 0;
     if(e.keyCode === 40) pos.y += pos.y < 2 ? 1 : 0;
-    if(e.keyCode === 32){
-    	let bullet = bullets[0];
-    	console.log(pos.x * gw + 60, pos.x * gw + 80, pos.y * gh + 60, pos.y * gh + 80, bullet.x, bullet.y, (bullet.x > (pos.x * gw + 60) && bullet.x < (pos.x + gw + 80) && bullet.y > (pos.y * gh + 60) && bullet.y < (pos.y * gh + 80)))
-	}
 }, false);
 
 function gameLoop(){
@@ -66,14 +62,14 @@ function gameLoop(){
 	}
 
 	for(let bullet of bullets){
-		if(bullet){
+		if(bullet){	
 			if(bullet.x < 0 || bullet.x > game.width || bullet.y < 0 || bullet.y > game.height){
 				bullets.splice(bullets.indexOf(bullet), 1);
 				bullet = null;
 				delete bullet;
 				continue;
 			}
-			if(bullet.x > (pos.x * gw + 60) && bullet.x < (pos.x + gw + 80) && bullet.y > (pos.y * gh + 60) && bullet.y < (pos.y * gh + 80)){
+			if(bullet.x > (pos.x * gw + 60) && bullet.x < (pos.x * gw + 80) && bullet.y > (pos.y * gh + 60) && bullet.y < (pos.y * gh + 80)){
 				bullets.splice(bullets.indexOf(bullet), 1);
 				bullet = null;
 				delete bullet;
@@ -103,9 +99,9 @@ function bullet(from){
 				var b = new Bullet(0, 1, 1, -1);
 				break;
 			case 'br':
-				var b = new Bullet(1, 1, -1, -1);
+				var b = new Bullet(1, 1, -1, 1);
 				break;
-			//=============L AND R================
+			//===============LEFT===================
 			case '1l':
 				var b = new Bullet(0, 1 / 3, 1, 0);
 				break;
@@ -113,6 +109,10 @@ function bullet(from){
 			case 'l':
 				var b = new Bullet(0, 0.5, 1, 0);
 				break;
+			case '3l':
+				var b = new Bullet(0, 2 / 3, 1, 0);
+				break;
+			//===============RIGHT==================
 			case '1r':
 				var b = new Bullet(1, 1 / 3, -1, 0);
 				break;
@@ -120,14 +120,33 @@ function bullet(from){
 			case 'r':
 				var b = new Bullet(1, 0.5, -1, 0);
 				break;
-			//=============T AND B================
+			case '3r':
+				var b = new Bullet(1, 2 / 3, -1, 0);
+				break;
+			//================TOP===================
+			case '1t':
+				var b = new Bullet(1 / 3, 0, 0, 1);
+				break;
+			case '2t':
 			case 't':
 				var b = new Bullet(0.5, 0, 0, 1);
 				break;
+			case '3t':
+				var b = new Bullet(2 / 3, 0, 0, 1);
+				break;
+			//===============BOTTOM==================
+			case '1b':
+				var b = new Bullet(1 / 3, 1, 0, -1);
+				break;
+			case '2b':
 			case 'b':
 				var b = new Bullet(0.5, 1, 0, -1);
 				break;
+			case '3b':
+				var b = new Bullet(2 / 3, 1, 0, -1);
+				break;
 		}
+		console.log('Direction:', d, '| Bullet:', b);
 		bullets.push(b);
 	}
 }
