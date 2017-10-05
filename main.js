@@ -15,6 +15,7 @@ let pos = { x: 1, y: 1 };
 
 function start(map){
 	let beats = map.split('\n');
+	readBlob('blob:https://steadfast-market.glitch.me/77df19e7-d4e7-4675-807f-5206f1470406')
 	let music = beats.shift();
 	snd.src = 'blob:https://steadfast-market.glitch.me/77df19e7-d4e7-4675-807f-5206f1470406'
 	snd.play()
@@ -90,40 +91,41 @@ function gameLoop(){
 function bullet(from){
 	for(let d of from){
 		d = d.substring(0, 2)
-		var b = new Bullet(0, 0, 1, 1);
 		switch(d){
 			//=============CORNERS================
-			//case 'tl':
-			//	var b = new Bullet(0, 0, 1, 1);
-			//	break;
+			case 'tl':
+				var b = new Bullet(0, 0, 1, 1);
+				break;
 			case 'tr':
-				b = new Bullet(1, 0, -1, 1);
+				var b = new Bullet(1, 0, -1, 1);
 				break;
 			case 'bl':
-				b = new Bullet(0, 1, 1, -1);
+				var b = new Bullet(0, 1, 1, -1);
 				break;
 			case 'br':
-				b = new Bullet(1, 1, -1, -1);
+				var b = new Bullet(1, 1, -1, -1);
 				break;
 			//=============L AND R================
 			case '1l':
-				b = new Bullet(0, 1 / 3, 1, 0);
+				var b = new Bullet(0, 1 / 3, 1, 0);
 				break;
-			case '2l' || 'l':
-				b = new Bullet(0, 0.5, 1, 0);
+			case '2l':
+			case 'l':
+				var b = new Bullet(0, 0.5, 1, 0);
 				break;
 			case '1r':
-				b = new Bullet(1, 1 / 3, -1, 0);
+				var b = new Bullet(1, 1 / 3, -1, 0);
 				break;
-			case '2r' || 'r':
-				b = new Bullet(1, 0.5, -1, 0);
+			case '2r':
+			case 'r':
+				var b = new Bullet(1, 0.5, -1, 0);
 				break;
 			//=============T AND B================
 			case 't':
-				b = new Bullet(0.5, 0, 0, 1);
+				var b = new Bullet(0.5, 0, 0, 1);
 				break;
 			case 'b':
-				b = new Bullet(0.5, 1, 0, -1);
+				var b = new Bullet(0.5, 1, 0, -1);
 				break;
 		}
 		bullets.push(b);
