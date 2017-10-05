@@ -99,7 +99,7 @@ function bullet(from){
 				var b = new Bullet(0, 1, 1, -1);
 				break;
 			case 'br':
-				var b = new Bullet(1, 1, -1, 1);
+				var b = new Bullet(1, 1, -1, -1);
 				break;
 			//===============LEFT===================
 			case '1l':
