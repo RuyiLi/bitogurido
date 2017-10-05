@@ -11,14 +11,16 @@ function readSingleFile(evt) {
     }
 }
 
-function readBlob(b){
-	let x = new XMLHttpRequest();
-	console.log('ok')
-	x.onload = function() {
-	    alert(x.responseText);
-	};
-	x.open('get', b);
-	x.send();
+function previewFile(file) {
+  	var reader = new FileReader();
+
+  	reader.addEventListener("load", function () {
+    	preview.src = reader.result;
+  	}, false);
+
+  	if (file) {
+    	return reader.readAsDataURL(file);
+  	}
 }
 
 document.getElementById('bitofile').addEventListener('change', readSingleFile, false);

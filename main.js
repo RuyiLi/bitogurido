@@ -15,10 +15,9 @@ let pos = { x: 1, y: 1 };
 
 function start(map){
 	let beats = map.split('\n');
-	//readBlob('blob:https://steadfast-market.glitch.me/77df19e7-d4e7-4675-807f-5206f1470406')
-	//let music = beats.shift();
-	//snd.src = 'blob:https://steadfast-market.glitch.me/77df19e7-d4e7-4675-807f-5206f1470406'
-	//snd.play()
+	let music = beats.shift();
+	snd.src = music;
+	snd.play();
 	ctx.strokeStyle = ctx.fillStyle = '#EFEFEF';
 	ctx.lineWidth = 0.8;
 	console.log('Loaded bitomap! Patterns: ' + beats.join(' | '));
