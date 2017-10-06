@@ -1,0 +1,109 @@
+https://instaud.io/_/1jS9.mp3
+tl tr bl br, , 1.5
+1l 1t, 2000
+tl tr bl br, , 1.5
+3r 3b, 2000
+l t, 1200
+3l 3t, 1200
+3r 3b, 1200
+r b, 1200
+1r 1b, 1200
+1b 1t
+b t,,2
+3b 3t
+1r 1l
+r l,,2
+3r 3l
+1r 1l,0
+r l,0,2
+3r 3l
+tl tr bl br, , 1.5
+1l 1t, 2000
+tl tr bl br, , 1.5
+3r 3b, 2000
+l t, 1200
+3l 3t, 1200
+3r 3b, 1200
+r b, 1200
+1r 1b, 1200
+1b 1t
+b t,,2
+3b 3t
+1r 1l
+r l,,2
+3r 3l
+1r 1l,0
+r l,0,2
+3r 3l
+tl tr bl br, , 1.5
+1l 1t, 2000
+tl tr bl br, , 1.5
+3r 3b, 2000
+l t, 1200
+3l 3t, 1200
+3r 3b, 1200
+r b, 1200
+1r 1b, 1200
+1b 1t
+b t,,2
+3b 3t
+1r 1l
+r l,,2
+3r 3l
+1r 1l,0
+r l,0,2
+3r 3l
+tl tr bl br, , 1.5
+1l 1t, 2000
+tl tr bl br, , 1.5
+3r 3b, 2000
+l t, 1200
+3l 3t, 1200
+3r 3b, 1200
+r b, 1200
+1r 1b, 1200
+1b 1t
+b t,,2
+3b 3t
+1r 1l
+r l,,2
+3r 3l
+1r 1l,0
+r l,0,2
+3r 3l
+tl tr bl br, , 1.5
+1l 1t, 2000
+tl tr bl br, , 1.5
+3r 3b, 2000
+l t, 1200
+3l 3t, 1200
+3r 3b, 1200
+r b, 1200
+1r 1b, 1200
+1b 1t
+b t,,2
+3b 3t
+1r 1l
+r l,,2
+3r 3l
+1r 1l,0
+r l,0,2
+3r 3l
+tl tr bl br, , 1.5
+1l 1t, 2000
+tl tr bl br, , 1.5
+3r 3b, 2000
+l t, 1200
+3l 3t, 1200
+3r 3b, 1200
+r b, 1200
+1r 1b, 1200
+1b 1t
+b t,,2
+3b 3t
+1r 1l
+r l,,2
+3r 3l
+1r 1l,0
+r l,0,2
+3r 3l
