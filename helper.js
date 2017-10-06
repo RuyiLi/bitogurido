@@ -11,16 +11,21 @@ function readSingleFile(evt) {
     }
 }
 
-function previewFile(file) {
-  	var reader = new FileReader();
+function Timer(callback, delay) {
+    var timerId, start, remaining = delay;
 
-  	reader.addEventListener("load", function () {
-    	preview.src = reader.result;
-  	}, false);
+    this.pause = function() {
+        window.clearTimeout(timerId);
+        remaining -= new Date() - start;
+    };
 
-  	if (file) {
-    	return reader.readAsDataURL(file);
-  	}
+    this.resume = function() {
+        start = new Date();
+        window.clearTimeout(timerId);
+        timerId = window.setTimeout(callback, remaining);
+    };
+
+    this.resume();
 }
 
 document.getElementById('bitofile').addEventListener('change', readSingleFile, false);
